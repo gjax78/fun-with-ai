@@ -7,7 +7,10 @@ const fetchAPI = {
         Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
       },
       body: JSON.stringify(data),
-     })
+    })
+    .then(response => {
+      return response.json()
+    })
   }
 }
 
