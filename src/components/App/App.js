@@ -1,4 +1,6 @@
 import './App.css';
+import React from 'react'
+import fetchAPI from '../../util/apiCalls' 
 
 const App = () => {
   return (
