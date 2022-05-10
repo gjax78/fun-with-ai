@@ -5,7 +5,14 @@
   display: flex;
 }
 
-.response-title {
-  padding: 0 5% 0 5%;
+.title-container {
+  padding-left: 1em;
+}
+
+.response-title, .prompt-title {
   font-weight: bold;
+}
+
+.response, .prompt {
+  padding: 0 5% 0 5%;
 }
