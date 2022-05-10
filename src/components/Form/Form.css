@@ -10,7 +10,7 @@ form {
 
 .prompt-input {
   width: 80vw;
-  height: 400px;
+  height: 40vh;
 }
 
 .submit-button {
@@ -20,4 +20,5 @@ form {
   color: #FFFFFF;
   border: none;
   align-self: flex-end;
+  cursor: pointer;
 }
