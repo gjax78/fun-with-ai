@@ -15,7 +15,7 @@ const App = () => {
   return (
     <main className="App">
       <h1>Fun with AI</h1>
-      <Form />
+      <Form addPrompt={addPrompt}/>
       <Responses />
     </main>
   )
