@@ -1,5 +1,6 @@
 import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
+import './Responses.css'
 
 const Responses = ({ responses }) => {
   const allResponses = responses.map(response => {
@@ -14,6 +15,7 @@ const Responses = ({ responses }) => {
 
   return (
     <div className='response-container'>
+      <h1>Responses</h1>
       {allResponses}
     </div>
   )
