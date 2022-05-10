@@ -1,0 +1,22 @@
+.enter-prompt {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-input {
+  width: 80%;
+  height: 400px;
+}
+
+.submit-button {
+  width: 7%;
+  height: 40px;
+  border-radius: 2px;
+  background: #0045C3;
+  color: #FFFFFF;
+  border: none;
+}
