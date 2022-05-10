@@ -1,5 +1,6 @@
 .enter-prompt {
   font-weight: bold;
+  align-self:flex-start;
 }
 
 form {
@@ -8,15 +9,15 @@ form {
 }
 
 .prompt-input {
-  width: 80%;
+  width: 80vw;
   height: 400px;
 }
 
 .submit-button {
-  width: 7%;
   height: 40px;
   border-radius: 2px;
   background: #0045C3;
   color: #FFFFFF;
   border: none;
+  align-self: flex-end;
 }
