@@ -34,7 +34,7 @@ const Form = ({ addPrompt }) => {
       <button
         className='submit-button'
         onClick={event => handleSubmit(event)}>
-          SUBMIT
+          Submit
       </button>
     </form>
   )
