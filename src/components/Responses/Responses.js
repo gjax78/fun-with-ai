@@ -2,13 +2,16 @@ import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
 
 const Responses = ({ prompts }) => {
-  return (
-    <div className='response-container'>
-      <ResponseCard
+  const allPrompts = prompts.map(prompt => {
+    return (
+      <div className='response-container'>
+        <ResponseCard
+  
+        />
+      </div>
+    )
+  })
 
-      />
-    </div>
-  )
 }
 
 export default Responses 
