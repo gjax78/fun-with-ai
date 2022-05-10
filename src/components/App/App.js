@@ -9,14 +9,14 @@ const App = () => {
 
   const addPrompt = (data) => {
     fetchAPI.postPrompt(data)
-    .then(data => setPrompts(data))
+    .then(data => setPrompts([...prompts, data]))
   }
 
   return (
     <main className="App">
       <h1>Fun with AI</h1>
       <Form addPrompt={addPrompt}/>
-      <Responses />
+      <Responses prompts={prompts}/>
     </main>
   )
 }
