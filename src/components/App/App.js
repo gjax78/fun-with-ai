@@ -1,12 +1,16 @@
 import './App.css';
 import React from 'react'
+import Form from '../Form/Form'
+import Responses from '../Responses/Responses'
 import fetchAPI from '../../util/apiCalls' 
 
 const App = () => {
   return (
-    <div className="App">
+    <main className="App">
       <h1>Fun with AI</h1>
-    </div>
+      <Form />
+      <Responses />
+    </main>
   )
 }
 
