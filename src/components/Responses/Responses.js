@@ -1,13 +1,13 @@
 import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
 
-const Responses = ({ prompts }) => {
-  const allPrompts = prompts.map(prompt => {
+const Responses = ({ responses }) => {
+  console.log(responses)
+  const allResponses = responses.map(response => {
     return (
-      <div className='response-container' key={prompt.id}>
+      <div className='response-container' key={response.id}>
         <ResponseCard
-          prompt={prompt.prompt}
-          response={prompt.choices[0].text}
+          response={response.choices[0].text}
         />
       </div>
     )
@@ -15,7 +15,7 @@ const Responses = ({ prompts }) => {
 
   return (
     <div className='response-container'>
-      {allPrompts}
+      {allResponses}
     </div>
   )
 }
