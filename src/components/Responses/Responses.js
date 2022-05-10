@@ -1,9 +1,12 @@
 import React from 'react'
+import ResponseCard from '../ResponseCard/ResponseCard'
 
 const Responses = () => {
   return (
     <div className='response-container'>
-      <h1>Responses: Responses go here</h1>
+      <ResponseCard
+
+      />
     </div>
   )
 }
