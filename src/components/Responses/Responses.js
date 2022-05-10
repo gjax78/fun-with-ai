@@ -2,7 +2,6 @@ import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
 
 const Responses = ({ responses }) => {
-  console.log(responses)
   const allResponses = responses.map(response => {
     return (
       <div className='response-container' key={response.id}>
