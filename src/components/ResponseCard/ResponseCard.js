@@ -1,7 +1,7 @@
 import React from 'react'
 import './ResponseCard.css'
 
-const ResponseCard = ({ response }) => {
+const ResponseCard = ({ response, prompt }) => {
   return (
     <div className='card'>
       <div className='title-container'>
@@ -9,7 +9,7 @@ const ResponseCard = ({ response }) => {
         <p className='response-title'>Response:</p>
       </div>
       <div className='text-container'>
-        <p className='prompt'>prompt goes here</p>
+        <p className='prompt'>{prompt}</p>
         <p className='response'>{response}</p>
       </div>
     </div>
