@@ -24,7 +24,7 @@ const Form = ({ addPrompt }) => {
   return (
     <form>
       <p className='enter-prompt'>Enter prompt</p>
-      <input
+      <textarea
         type='text'
         className='prompt-input'
         value={text}
