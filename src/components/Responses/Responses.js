@@ -15,7 +15,7 @@ const Responses = ({ responses }) => {
 
   return (
     <div className='response-container'>
-      <h1>Responses</h1>
+      <h1 className='responses-header'>Responses</h1>
       {allResponses}
     </div>
   )
