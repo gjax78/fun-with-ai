@@ -1,5 +1,6 @@
 import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
+import PropTypes from 'prop-types'
 import './Responses.css'
 
 const Responses = ({ responses, prompts }) => {
@@ -24,3 +25,8 @@ const Responses = ({ responses, prompts }) => {
 }
 
 export default Responses 
+
+Responses.propTypes = {
+  responses: PropTypes.array.isRequired,
+  prompts: PropTypes.array.isRequired
+}
