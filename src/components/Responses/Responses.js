@@ -27,6 +27,6 @@ const Responses = ({ responses, prompts }) => {
 export default Responses 
 
 Responses.propTypes = {
-  responses: PropTypes.array.isRequired,
-  prompts: PropTypes.array.isRequired
+  responses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  prompts: PropTypes.arrayOf(PropTypes.object).isRequired
 }
