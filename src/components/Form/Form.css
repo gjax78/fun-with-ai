@@ -1,0 +1,29 @@
+.enter-prompt {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-input {
+  width: 80vw;
+  height: 40vh;
+  padding: 1rem;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
+}
+
+.submit-button {
+  height: 35px;
+  border-radius: 2px;
+  background: #0045C3;
+  color: #FFFFFF;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 0 4% 0 4%;
+  margin-top: .5%;
+}
