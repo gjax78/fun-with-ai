@@ -1,9 +1,10 @@
 .card {
   background: #EDEEEE;
   width: 80vw;
-  height: 20vh;
+  height: 50%;
   display: flex;
   margin: 5% 0 5% 0;
+  
 }
 
 .title-container {
@@ -16,4 +17,5 @@
 
 .response, .prompt {
   padding: 0 5% 0 5%;
+  
 }
