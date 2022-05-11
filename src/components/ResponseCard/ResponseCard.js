@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './ResponseCard.css'
 
 const ResponseCard = ({ response, prompt }) => {
@@ -17,3 +18,8 @@ const ResponseCard = ({ response, prompt }) => {
 }
 
 export default ResponseCard
+
+ResponseCard.propTypes = {
+  response: PropTypes.string.isRequired,
+  prompt: PropTypes.string.isRequired
+}
