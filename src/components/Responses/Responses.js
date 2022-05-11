@@ -2,12 +2,14 @@ import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
 import './Responses.css'
 
-const Responses = ({ responses }) => {
-  const allResponses = responses.map(response => {
+const Responses = ({ responses, prompts }) => {
+  const allResponses = responses.map((response, index) => {
+    const prompt = prompts[index]
     return (
       <div className='response-container' key={response.id}>
         <ResponseCard
           response={response.choices[0].text}
+          prompt={prompt.prompt}
         />
       </div>
     )

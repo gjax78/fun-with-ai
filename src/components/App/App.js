@@ -6,17 +6,19 @@ import fetchAPI from '../../util/apiCalls'
 
 const App = () => {
   const [responses, setResponses] = useState([])
+  const [prompts, setPrompts] = useState([])
 
-  const addPrompt = (data) => {
+  const addPrompt = (data, prompt) => {
     fetchAPI.postPrompt(data)
     .then(data => setResponses([...responses, data]))
+    setPrompts([...prompts, prompt])
   }
 
   return (
     <main className="App">
       <h1 className='header'>Fun with AI</h1>
       <Form addPrompt={addPrompt}/>
-      <Responses responses={responses}/>
+      <Responses responses={responses} prompts={prompts}/>
     </main>
   )
 }
