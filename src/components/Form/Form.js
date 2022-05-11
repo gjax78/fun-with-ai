@@ -18,7 +18,7 @@ const Form = ({ addPrompt }) => {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     }
-    addPrompt(data)
+    addPrompt(data, data)
   }
 
   return (
