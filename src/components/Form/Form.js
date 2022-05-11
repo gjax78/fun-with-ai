@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Form.css'
 
 const Form = ({ addPrompt }) => {
@@ -41,3 +42,7 @@ const Form = ({ addPrompt }) => {
 }
 
 export default Form
+
+Form.propTypes = {
+  addPrompt: PropTypes.func
+}
