@@ -11,6 +11,8 @@ form {
   width: 80vw;
   height: 40vh;
   padding: 1rem;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 15px;
 }
 
 .submit-button {
