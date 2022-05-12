@@ -4,8 +4,11 @@ import PropTypes from 'prop-types'
 import './Responses.css'
 
 const Responses = ({ responses, prompts }) => {
-  const allResponses = responses.map((response, index) => {
-    const prompt = prompts[index]
+  const sortedResponses = responses.sort((a, b) => b.created - a.created)
+  const sortedPrompts = prompts.sort((a, b) => b.time - a.time)
+
+  const allResponses = sortedResponses.map((response, index) => {
+    const prompt = sortedPrompts[index]
     return (
       <div className='response-container' key={response.id}>
         <ResponseCard
