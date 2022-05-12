@@ -8,9 +8,9 @@ const App = () => {
   const [responses, setResponses] = useState([])
   const [prompts, setPrompts] = useState([])
 
-  const addPrompt = (data, prompt) => {
-    fetchAPI.postPrompt(data)
-    .then(data => setResponses([...responses, data]))
+  const addPrompt = async (data, prompt) => {
+    const result = await fetchAPI.postPrompt(data)
+    setResponses([...responses, result])
     
     
     prompt.time = Date.now()
