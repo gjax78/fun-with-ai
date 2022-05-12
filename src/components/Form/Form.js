@@ -9,6 +9,10 @@ const Form = ({ addPrompt }) => {
     setText(event.target.value)
   }
 
+  const clearTextArea = () => {
+    setText('')
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
     const data = {
@@ -20,6 +24,7 @@ const Form = ({ addPrompt }) => {
       presence_penalty: 0.0,
     }
     addPrompt(data, data)
+    clearTextArea()
   }
 
   return (
