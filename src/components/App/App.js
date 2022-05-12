@@ -11,6 +11,9 @@ const App = () => {
   const addPrompt = (data, prompt) => {
     fetchAPI.postPrompt(data)
     .then(data => setResponses([...responses, data]))
+    
+    
+    prompt.time = Date.now()
     setPrompts([...prompts, prompt])
   }
 
