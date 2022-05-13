@@ -17,19 +17,18 @@ const Form = ({ setResponses }) => {
     })
   }
 
-
-  const handleTextChange = (event) => {
+  const handlePromptChange = (event) => {
     setPrompt(event.target.value)
-  }
-
-  const clearTextArea = () => {
-    setPrompt('')
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     addPrompt(prompt)
     clearTextArea()
+  }
+
+  const clearTextArea = () => {
+    setPrompt('')
   }
 
   return (
@@ -39,7 +38,7 @@ const Form = ({ setResponses }) => {
         type='text'
         className='prompt-input'
         value={prompt}
-        onChange={event => handleTextChange(event)}
+        onChange={event => handlePromptChange(event)}
       />
 
       <button
