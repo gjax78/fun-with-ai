@@ -3,17 +3,13 @@ import ResponseCard from '../ResponseCard/ResponseCard'
 import PropTypes from 'prop-types'
 import './Responses.css'
 
-const Responses = ({ responses, prompts }) => {
-  const sortedResponses = responses.sort((a, b) => b.created - a.created)
-  const sortedPrompts = prompts.sort((a, b) => b.time - a.time)
-
-  const allResponses = sortedResponses.map((response, index) => {
-    const prompt = sortedPrompts[index]
+const Responses = ({ responses }) => {
+const allResponses = responses.map(response => {
     return (
-      <div className='response-container' key={response.id}>
+      <div className='response-container' key={response.key}>
         <ResponseCard
-          response={response.choices[0].text}
-          prompt={prompt.prompt}
+          response={response.response}
+          prompt={response.prompt}
         />
       </div>
     )
@@ -30,6 +26,5 @@ const Responses = ({ responses, prompts }) => {
 export default Responses 
 
 Responses.propTypes = {
-  responses: PropTypes.arrayOf(PropTypes.object).isRequired,
-  prompts: PropTypes.arrayOf(PropTypes.object).isRequired
+  responses: PropTypes.arrayOf(PropTypes.object).isRequired
 }
