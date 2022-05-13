@@ -1,7 +1,7 @@
 const fetchAPI = {
-  postPrompt(data) {
+  postPrompt(prompt) {
     const data = {
-      prompt: text,
+      prompt: prompt,
       temperature: 0.5,
       max_tokens: 64,
       top_p: 1.0,
