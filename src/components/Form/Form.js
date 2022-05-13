@@ -1,21 +1,34 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Form.css'
+import fetchAPI from '../../util/apiCalls' 
 
-const Form = ({ addPrompt }) => {
-  const [text, setText] = useState('')
+const Form = ({ setResponses }) => {
+  const [prompt, setPrompt] = useState([])
+
+  const addPrompt = (prompt) => {
+    fetchAPI.postPrompt(prompt)
+    .then(data => {
+      setPrompt(previousResponseCards => [{
+        prompt: prompt, 
+        response: data.choices[0].text, 
+        key: Date.now()
+      }, ...previousResponseCards])
+    })
+  }
+
 
   const handleTextChange = (event) => {
-    setText(event.target.value)
+    setPrompt(event.target.value)
   }
 
   const clearTextArea = () => {
-    setText('')
+    setPrompt('')
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    addPrompt(data, data)
+    addPrompt(prompt)
     clearTextArea()
   }
 
@@ -25,7 +38,7 @@ const Form = ({ addPrompt }) => {
       <textarea
         type='text'
         className='prompt-input'
-        value={text}
+        value={prompt}
         onChange={event => handleTextChange(event)}
       />
 
