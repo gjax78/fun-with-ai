@@ -1,5 +1,5 @@
 const fetchAPI = {
-  postPrompt(prompt) {
+  async postPrompt(prompt) {
     const data = {
       prompt: prompt,
       temperature: 0.5,
@@ -9,7 +9,7 @@ const fetchAPI = {
       presence_penalty: 0.0,
     }
 
-    return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
+    const response = await fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -17,9 +17,7 @@ const fetchAPI = {
       },
       body: JSON.stringify(data),
     })
-    .then(response => {
-      return response.json()
-    })
+    return await response.json()
   }
 }
 
