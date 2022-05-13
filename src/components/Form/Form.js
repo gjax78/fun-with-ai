@@ -9,7 +9,7 @@ const Form = ({ setResponses }) => {
   const addPrompt = (prompt) => {
     fetchAPI.postPrompt(prompt)
     .then(data => {
-      setPrompt(previousResponseCards => [{
+      setResponses(previousResponseCards => [{
         prompt: prompt, 
         response: data.choices[0].text, 
         key: Date.now()
