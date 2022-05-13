@@ -15,14 +15,6 @@ const Form = ({ addPrompt }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const data = {
-      prompt: text,
-      temperature: 0.5,
-      max_tokens: 64,
-      top_p: 1.0,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
-    }
     addPrompt(data, data)
     clearTextArea()
   }
