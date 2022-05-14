@@ -4,7 +4,7 @@ import './Form.css'
 import fetchAPI from '../../util/apiCalls' 
 
 const Form = ({ setResponses, setIsLoading }) => {
-  const [prompt, setPrompt] = useState([])
+  const [prompt, setPrompt] = useState('')
   const [engine, setEngine] = useState('')
   const [error, setError] = useState('')
   
@@ -19,10 +19,10 @@ const Form = ({ setResponses, setIsLoading }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    validateTextArea()
+    validateForm()
   }
 
-  const validateTextArea = () => {
+  const validateForm = () => {
     if (!engine) {
       setError('Please select an AI engine from the dropdown.')
     } else if (engine && !prompt.length){
@@ -45,10 +45,10 @@ const Form = ({ setResponses, setIsLoading }) => {
     })
     .catch(error => setError(error))
     .finally(() => setIsLoading(false))
-    clearTextArea()
+    clearForm()
   }
 
-  const clearTextArea = () => {
+  const clearForm = () => {
     setPrompt('')
     setEngine('')
   }
