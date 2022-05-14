@@ -56,7 +56,7 @@ const Form = ({ setResponses, setIsLoading }) => {
   return (
     <form>
       <select className='choose-engine'
-        name='engine'
+        value={engine}
         onChange={event => handleDropdownChange(event)}>
         <option value=''>Choose an AI Engine</option>
         <option value='text-davinci-002'>Davinci - MOST CAPABLE BOT</option>
