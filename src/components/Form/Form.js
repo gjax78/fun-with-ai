@@ -16,7 +16,7 @@ const Form = ({ setResponses }) => {
         key: Date.now()
       }, ...previousResponseCards])
     })
-    .catch(error => setError('something went wrong'))
+    .catch(error => setError(error))
   }
 
   const validateTextArea = () => {
