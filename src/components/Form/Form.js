@@ -5,6 +5,7 @@ import fetchAPI from '../../util/apiCalls'
 
 const Form = ({ setResponses, setIsLoading }) => {
   const [prompt, setPrompt] = useState([])
+  const [engine, setEngine] = useState('')
   const [error, setError] = useState('')
 
   const addPrompt = (prompt) => {
@@ -34,6 +35,10 @@ const Form = ({ setResponses, setIsLoading }) => {
     setPrompt(event.target.value)
   }
   
+  const handleDropdownChange = (event) => {
+    setEngine(event.target.value)
+  }
+  
   const handleSubmit = (event) => {
     event.preventDefault()
     validateTextArea()
@@ -46,6 +51,16 @@ const Form = ({ setResponses, setIsLoading }) => {
 
   return (
     <form>
+      <select className='choose-engine'
+        name='engine'
+        onChange={event => handleDropdownChange(event)}>
+        <option value=' '>Choose an AI Engine</option>
+        <option value='text-davinci-002'>Davinci - MOST CAPABLE BOT</option>
+        <option value='text-curie-001'>Curie - CAPABLE & FAST</option>
+        <option value='text-babbage-001'>Babbage - STRAIGHT FORWARD & FAST</option>
+        <option value='text-ada-001'>Ada - SIMPLE & FAST</option>
+      </select>
+
       <p className='enter-prompt'>Enter prompt</p>
       <textarea
         type='text'
