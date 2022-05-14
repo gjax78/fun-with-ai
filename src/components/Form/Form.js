@@ -7,6 +7,31 @@ const Form = ({ setResponses, setIsLoading }) => {
   const [prompt, setPrompt] = useState([])
   const [engine, setEngine] = useState('')
   const [error, setError] = useState('')
+  
+  const handlePromptChange = (event) => {
+    setPrompt(event.target.value)
+  }
+  
+  const handleDropdownChange = (event) => {
+    setEngine(event.target.value)
+    setError('')
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    validateTextArea()
+  }
+
+  const validateTextArea = () => {
+    if (!engine) {
+      setError('Please select an AI engine from the dropdown.')
+    } else if (engine && !prompt.length){
+      setError('Please type a prompt in to get started.')
+    } else {
+      addPrompt(prompt, engine)
+      setError('')
+    }
+  }
 
   const addPrompt = (prompt) => {
     setIsLoading(true)
@@ -20,33 +45,12 @@ const Form = ({ setResponses, setIsLoading }) => {
     })
     .catch(error => setError(error))
     .finally(() => setIsLoading(false))
-  }
-
-  const validateTextArea = () => {
-    if (!prompt.length) {
-      setError('Please type a prompt in the text area above to get started.')
-    } else {
-      addPrompt(prompt)
-      setError('')
-    }
-  }
-
-  const handlePromptChange = (event) => {
-    setPrompt(event.target.value)
-  }
-  
-  const handleDropdownChange = (event) => {
-    setEngine(event.target.value)
-  }
-  
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    validateTextArea()
     clearTextArea()
   }
 
   const clearTextArea = () => {
     setPrompt('')
+    setEngine('')
   }
 
   return (
@@ -54,7 +58,7 @@ const Form = ({ setResponses, setIsLoading }) => {
       <select className='choose-engine'
         name='engine'
         onChange={event => handleDropdownChange(event)}>
-        <option value=' '>Choose an AI Engine</option>
+        <option value=''>Choose an AI Engine</option>
         <option value='text-davinci-002'>Davinci - MOST CAPABLE BOT</option>
         <option value='text-curie-001'>Curie - CAPABLE & FAST</option>
         <option value='text-babbage-001'>Babbage - STRAIGHT FORWARD & FAST</option>
