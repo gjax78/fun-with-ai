@@ -66,7 +66,7 @@ const Form = ({ setResponses, setIsLoading }) => {
         <option value='text-ada-001'>Ada - SIMPLE & FAST</option>
       </select>
 
-      <p className='enter-prompt'>Enter prompt</p>
+      <label className='enter-prompt'>Enter prompt</label>
       <textarea
         aria-label='enter a prompt'
         type='text'
