@@ -1,5 +1,5 @@
 const fetchAPI = {
-  postPrompt(prompt) {
+  postPrompt(prompt, engine) {
     const data = {
       prompt: prompt,
       temperature: 0.5,
@@ -9,7 +9,7 @@ const fetchAPI = {
       presence_penalty: 0.0,
     }
 
-    return fetch('https://api.openai.com/v1/engines/text-curie-001/completions', {
+    return fetch(`https://api.openai.com/v1/engines/${engine}/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
