@@ -5,6 +5,7 @@ import fetchAPI from '../../util/apiCalls'
 
 const Form = ({ setResponses }) => {
   const [prompt, setPrompt] = useState([])
+  const [error, setError] = useState('')
 
   const addPrompt = (prompt) => {
     fetchAPI.postPrompt(prompt)
@@ -15,6 +16,16 @@ const Form = ({ setResponses }) => {
         key: Date.now()
       }, ...previousResponseCards])
     })
+    .catch(error => setError('something went wrong'))
+  }
+
+  const validateTextArea = () => {
+    if (!prompt.length) {
+      setError('Please type something in the text area to get started')
+    } else {
+      addPrompt(prompt)
+      setError('')
+    }
   }
 
   const handlePromptChange = (event) => {
@@ -23,7 +34,7 @@ const Form = ({ setResponses }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    addPrompt(prompt)
+    validateTextArea()
     clearTextArea()
   }
 
@@ -40,7 +51,7 @@ const Form = ({ setResponses }) => {
         value={prompt}
         onChange={event => handlePromptChange(event)}
       />
-
+      {error && <p>{error}</p>}
       <button
         className='submit-button'
         onClick={event => handleSubmit(event)}>
