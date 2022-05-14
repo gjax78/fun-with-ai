@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import './Form.css'
 import fetchAPI from '../../util/apiCalls' 
 
-const Form = ({ setResponses }) => {
+const Form = ({ setResponses, setIsLoading }) => {
   const [prompt, setPrompt] = useState([])
   const [error, setError] = useState('')
 
   const addPrompt = (prompt) => {
+    setIsLoading(true)
     fetchAPI.postPrompt(prompt)
     .then(data => {
       setResponses(previousResponseCards => [{
@@ -17,6 +18,7 @@ const Form = ({ setResponses }) => {
       }, ...previousResponseCards])
     })
     .catch(error => setError(error))
+    .finally(() => setIsLoading(false))
   }
 
   const validateTextArea = () => {
@@ -31,7 +33,7 @@ const Form = ({ setResponses }) => {
   const handlePromptChange = (event) => {
     setPrompt(event.target.value)
   }
-
+  
   const handleSubmit = (event) => {
     event.preventDefault()
     validateTextArea()
