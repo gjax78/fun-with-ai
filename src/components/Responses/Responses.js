@@ -18,7 +18,7 @@ const allResponses = responses.map(response => {
   return (
     <div className='response-container'>
       <h2 className='responses-header'>Responses</h2>
-      {allResponses}
+      {!allResponses.length ? "Type in a prompt to see some responses from the AI." : allResponses}
     </div>
   )
 }
