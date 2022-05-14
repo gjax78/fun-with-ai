@@ -30,3 +30,7 @@ form {
 .error {
   font-size: 12px;
 }
+
+.choose-engine {
+  width: 200px;
+}
