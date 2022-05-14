@@ -10,7 +10,7 @@ const Form = ({ setResponses, setIsLoading }) => {
 
   const addPrompt = (prompt) => {
     setIsLoading(true)
-    fetchAPI.postPrompt(prompt)
+    fetchAPI.postPrompt(prompt, engine)
     .then(data => {
       setResponses(previousResponseCards => [{
         prompt: prompt, 
