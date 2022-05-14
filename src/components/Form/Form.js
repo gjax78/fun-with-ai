@@ -56,6 +56,7 @@ const Form = ({ setResponses, setIsLoading }) => {
   return (
     <form>
       <select className='choose-engine'
+        aria-label='choose AI engine'
         value={engine}
         onChange={event => handleDropdownChange(event)}>
         <option value='' disabled>Choose an AI Engine</option>
@@ -67,6 +68,7 @@ const Form = ({ setResponses, setIsLoading }) => {
 
       <p className='enter-prompt'>Enter prompt</p>
       <textarea
+        aria-label='enter a prompt'
         type='text'
         className='prompt-input'
         value={prompt}
@@ -75,6 +77,7 @@ const Form = ({ setResponses, setIsLoading }) => {
       {error && <p className='error'>{error}</p>}
       <button
         className='submit-button'
+        aria-label='submit prompt for AI to return response'
         onClick={event => handleSubmit(event)}>
           Submit
       </button>
