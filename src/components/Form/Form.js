@@ -21,7 +21,7 @@ const Form = ({ setResponses }) => {
 
   const validateTextArea = () => {
     if (!prompt.length) {
-      setError('Please type something in the text area to get started')
+      setError('Please type a prompt in the text area above to get started.')
     } else {
       addPrompt(prompt)
       setError('')
@@ -51,7 +51,7 @@ const Form = ({ setResponses }) => {
         value={prompt}
         onChange={event => handlePromptChange(event)}
       />
-      {error && <p>{error}</p>}
+      {error && <p className='error'>{error}</p>}
       <button
         className='submit-button'
         onClick={event => handleSubmit(event)}>
