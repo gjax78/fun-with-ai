@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Fun with AI 🤖
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Whether you’re looking for a friendly chat, studying for an exam, or learning a new language, [Fun with AI](https://fun-with-ai-gjax78.netlify.app/) is a simple-to-use application that will help you unlock intellectual potential and may even strengthen your cognitive abilities.
 
-## Available Scripts
+There are a few friends to collaborate with, each a little unique:
 
-In the project directory, you can run:
+1. Davinci - The most capable AI. He will help you reach your highest potential.
+2. Curie - Faster than Davinci, but not quite as capable. She's still learning!
+3. Babbage - Very straightforward and very fast.
+4. Ada - A simple gal, but very speedy!
+    - If you're having trouble deciding, give Curie a try. 
+    
+After choosing your friend, put their knowledge to the test by typing a phrase of your choice in the text area (suggested prompts will be loaded for you after you choose your AI, but feel free to create your own as well). Have fun!
 
-### `npm start`
+![gif](https://user-images.githubusercontent.com/88151743/168497487-f710d064-cea4-4e8b-a893-cb8c11ddb089.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Documentation
+This application was created for the Shopify Front End Developer Intern Challenge (Fall 2022).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Spec sheet can be found [here](https://docs.google.com/document/d/1O7mCynsz_cBXkEaCFGSZAuvAOY84QVq35l20xJwjOYg/edit)
+- Project Board can be found [here](https://github.com/gjax78/fun-with-gpt3/projects/1)
+- Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
 
-### `npm test`
+## Table of Contents
+- [Overview](#fun-with-gpt3)
+- [Documentation](#documentation)
+- [Technologies](#technologies)
+- [Code Architecture](#code-architecture)
+- [Installation](#installation)
+- [Features](#features)
+- [Future Additions](#future-additions)
+- [Author](#author)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
+- React.js
+- CSS
+- HTML
+- Cypress
+- OpenAI API
+- Figma
 
-### `npm run build`
+## Code Architecture
+  - __src__
+    - __components__
+      - __App__
+        - [App.css](src/App/App.css)
+        - [App.js](src/App/App.js)
+      - __Form__
+        - [Form.css](src/components/Form/Form.css)
+        - [Form.js](src/components/Form/Form.js)
+      - __ResponseCard__
+        - [ResponseCard.css](src/components/ResponseCard/ResponseCard.css)
+        - [ResponseCard.js](src/components/ResponseCard/ResponseCard.js)
+      - __Responses__
+        - [Responses.css](src/components/Responses/Responses.css)
+        - [Responses.js](src/components/Responses/Responses.js)
+    - __util__
+        - [apiCalls.js](src/apiCalls.js)
+        - [questions](src/questions.js)
+    - [index.css](src/index.css)
+    - [index.js](src/index.js)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
+- Deployed site [here](https://fun-with-ai-gjax78.netlify.app/)
+- To view the code locally:
+  - Run `git clone git@github.com:gjax78/fun-with-gpt3.git` in your command line
+  - Run `cd fun-with-gpt3` to navigate into the repository
+  - Run `npm install`
+  - Run `npm start`
+  - The webpage will open in separate browser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
+- Form to submit a prompt and receive a response from an AI engine
+- Ability to select the AI engine from a dropdown menu
+- Randomized suggested prompt ideas that populate as placeholders after the user selects an AI engine
+- 100% Lighthouse Accessibility score
+- Loading symbol shows as site is POSTing data
+- Responsive Design
+- Error handling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Additions
+- Incorporate TypeScript
+- Save responses if the user leaves or reloads the page
+- Delete functionality for option to delete a response
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+- [Geena Jackson](https://github.com/gjax78)
