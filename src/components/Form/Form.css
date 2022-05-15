@@ -34,17 +34,18 @@ form {
 }
 
 .error {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .choose-engine {
   width: 275px;
-  height: 20px;
+  height: 25px;
   border-radius: 5px;
   cursor: pointer;
   background-color: #C4C4C4;
   align-self: center;
   font-family: 'Rubik', sans-serif;
+  font-size: 15px;
 }
 
 .robot {
