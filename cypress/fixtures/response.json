@@ -1,0 +1,14 @@
+{
+    "id": "cmpl-GERzeJQ4lvqPk8SkZu4XMIuR",
+    "object": "text_completion",
+    "created": 1586839808,
+    "model": "text-curie:001",
+    "choices": [
+        {
+            "text": "\n\n1. She is passionate about the work that Shopify is doing and wants to help make commerce better for everyone. 2. She thrives in ambiguous situations. 3. She always has cute cat photos readily available.",
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "length"
+        }
+    ]
+}
