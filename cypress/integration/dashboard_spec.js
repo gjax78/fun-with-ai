@@ -26,7 +26,7 @@ describe('Dashboard', () => {
       .contains('Responses')
   })
 
-  it('should display a sentence telling the user what to do if they have not yet submitted a prompt', () => {
+  it('should display a message telling the user what to do if they have not yet submitted a prompt', () => {
     cy.get('.response-container')
       .contains('Type in a prompt to see some responses from the AI.')
   })
@@ -45,5 +45,31 @@ describe('Dashboard', () => {
       .click()
     cy.get('.error')
       .contains('Please type a prompt in to get started.')
+  })
+
+  it('should be able to send a prompt to the AI engine', () => {
+    cy.get('select')
+      .select('Curie - CAPABLE & FAST')
+    cy.get('.prompt-input')
+      .type('Type prompt here')
+    cy.get('.submit-button')
+      .click()
+  })
+
+  it('should display the AI engine\'s response once the form has been validated and the user submits', () => {
+    cy.get('select')
+      .select('Curie - CAPABLE & FAST')
+    cy.get('.prompt-input')
+      .type('Type prompt here')
+    cy.get('.submit-button')
+      .click()
+    cy.get('.prompt-title')
+      .contains('Prompt')
+    cy.get('.response-title')
+      .contains('Response')
+    cy.get('.prompt')
+      .contains('Type prompt here')
+    cy.get('.response')
+      .contains('This is a test')
   })
 })
