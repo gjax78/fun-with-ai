@@ -30,4 +30,20 @@ describe('Dashboard', () => {
     cy.get('.response-container')
       .contains('Type in a prompt to see some responses from the AI.')
   })
+
+  it('should display a message if the user has not selected an engine', () => {
+    cy.get('.submit-button')
+      .click()
+    cy.get('.error')
+      .contains('Please select an AI engine from the dropdown.')
+  })
+
+  it('should display a message if the user has not typed in a prompt', () => {
+    cy.get('select')
+      .select('Curie - CAPABLE & FAST')
+    cy.get('.submit-button')
+      .click()
+    cy.get('.error')
+      .contains('Please type a prompt in to get started.')
+  })
 })
