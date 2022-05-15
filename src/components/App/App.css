@@ -1,10 +1,9 @@
 .App {
   display: flex;
   flex-direction: column;
-  padding-left: 200px;
-  padding-right: 215px;
-  background: #2B363A;
-  height: 100vh;
+  padding-left: 300px;
+  padding-right: 310px;
+  height: 100%;
   font-family: 'Rubik', sans-serif;
   color: white;
 }
