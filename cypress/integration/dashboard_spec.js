@@ -29,6 +29,7 @@ describe('Dashboard', () => {
   it('should display a message telling the user what to do if they have not yet submitted a prompt', () => {
     cy.get('.response-container')
       .contains('Type in a prompt to see some responses from the AI.')
+      .should('not.contain', 'Please select an AI engine from the dropdown.')
   })
 
   it('should display a message if the user has not selected an engine', () => {
@@ -36,6 +37,7 @@ describe('Dashboard', () => {
       .click()
     cy.get('.error')
       .contains('Please select an AI engine from the dropdown.')
+      .should('not.contain', 'Type in a prompt to see some responses from the AI.')
   })
 
   it('should display a message if the user has not typed in a prompt', () => {
@@ -71,5 +73,26 @@ describe('Dashboard', () => {
       .contains('Type prompt here')
     cy.get('.response')
       .contains('This is a test')
+  })
+
+  it('should clear the form once the form has been validated and the user submits', () => {
+    cy.get('select')
+      .select('Curie - CAPABLE & FAST')
+    cy.get('.prompt-input')
+      .type('Type prompt here')
+    cy.get('.submit-button')
+      .click()
+    cy.get('.prompt-title')
+      .contains('Prompt')
+    cy.get('.response-title')
+      .contains('Response')
+    cy.get('.prompt')
+      .contains('Type prompt here')
+    cy.get('.response')
+      .contains('This is a test')
+    cy.get('select')
+      .contains('Choose an AI Engine')
+    cy.get('.prompt-input')
+      .should('be.empty')
   })
 })
