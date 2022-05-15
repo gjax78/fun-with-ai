@@ -51,7 +51,31 @@ form {
   height: 290px;
   width: 170px;
   position: fixed;
-  left: 139px;
+  left: 39px;
   top: 270px;
   position: absolute;
+}
+
+@media screen and (max-width: 840px) {
+  .robot {
+    display: none;
+  }
+  .prompt-input {
+    height: 200px;
+  }
+  .enter-prompt {
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .robot {
+    display: none;
+  }
+  .prompt-input {
+    height: 200px;
+  }
+  .enter-prompt {
+    padding-top: 5%;
+  }
 }
