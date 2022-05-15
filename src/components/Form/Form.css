@@ -53,4 +53,5 @@ form {
   position: fixed;
   left: 39px;
   top: 270px;
+  position: absolute;
 }
