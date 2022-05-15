@@ -7,6 +7,7 @@ const Form = ({ setResponses, setIsLoading }) => {
   const [prompt, setPrompt] = useState('')
   const [engine, setEngine] = useState('')
   const [error, setError] = useState('')
+  const [placeholder, setPlaceholder] = useState('')
   
   const handlePromptChange = (event) => {
     setPrompt(event.target.value)
@@ -51,6 +52,7 @@ const Form = ({ setResponses, setIsLoading }) => {
   const clearForm = () => {
     setPrompt('')
     setEngine('')
+    setPlaceholder('')
   }
 
   return (
@@ -72,6 +74,7 @@ const Form = ({ setResponses, setIsLoading }) => {
         type='text'
         className='prompt-input'
         value={prompt}
+        placeholder={placeholder}
         onChange={event => handlePromptChange(event)}
       />
       {error && <p className='error'>{error}</p>}
