@@ -11,3 +11,20 @@
   color: white;
 }
 
+.header {
+  font-size: 50px;
+  align-self: center;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 3px 10px #1C858D;
+    color: white;
+    letter-spacing: -0.05em;
+    font-family: 'Anton', Arial, sans-serif;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 75px;
+}
