@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Form.css'
 import fetchAPI from '../../util/apiCalls' 
@@ -68,10 +68,10 @@ const Form = ({ setResponses, setIsLoading }) => {
         value={engine}
         onChange={event => handleDropdownChange(event)}>
         <option value='' disabled>Choose an AI Engine</option>
-        <option value='text-davinci-002'>Davinci - MOST CAPABLE BOT</option>
-        <option value='text-curie-001'>Curie - CAPABLE & FAST</option>
-        <option value='text-babbage-001'>Babbage - STRAIGHT FORWARD & FAST</option>
-        <option value='text-ada-001'>Ada - SIMPLE & FAST</option>
+        <option value='text-davinci-002'>Davinci - Most capable</option>
+        <option value='text-curie-001'>Curie - Less capable, but fast</option>
+        <option value='text-babbage-001'>Babbage - Straightforward and fast</option>
+        <option value='text-ada-001'>Ada - Simple and fast</option>
       </select>
 
       <label className='enter-prompt'>Enter prompt</label>
