@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './Form.css'
 import fetchAPI from '../../util/apiCalls' 
 import data from '../../util/questions' 
+import robot from './assets/robot.png'
 
 const Form = ({ setResponses, setIsLoading }) => {
   const [prompt, setPrompt] = useState('')
@@ -63,6 +64,7 @@ const Form = ({ setResponses, setIsLoading }) => {
 
   return (
     <form>
+      <img src={robot} className='robot' alt='robot'/>
       <select className='choose-engine'
         aria-label='choose AI engine'
         value={engine}
