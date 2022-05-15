@@ -1,7 +1,7 @@
 import React from 'react'
 import ResponseCard from '../ResponseCard/ResponseCard'
 import PropTypes from 'prop-types'
-import Spinner from '../Spinner/Spinner'
+import ReactLoading from 'react-loading'
 import './Responses.css'
 
 const Responses = ({ responses, isLoading }) => {
@@ -17,7 +17,7 @@ const allResponses = responses.map(response => {
   })
 
   return isLoading ? (
-    <Spinner /> 
+    <ReactLoading type='bubbles' color='#ffffff' className='spinner'/> 
     ) :
     <div className='response-container'>
       <h2 className='responses-header'>Responses</h2>
