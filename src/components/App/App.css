@@ -1,15 +1,12 @@
 .App {
   display: flex;
   flex-direction: column;
-  align-items: left;
   padding-left: 200px;
   padding-right: 215px;
-  text-align: left;
   background: #2B363A;
   height: 100vh;
   font-family: 'Rubik', sans-serif;
   color: white;
-  height: 100vh;
 }
 
 .header {
