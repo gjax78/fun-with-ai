@@ -12,5 +12,22 @@ describe('Dashboard', () => {
       .should('be.visible')
   })
 
+  it('should contain a dropdown, text input box, and a submit button', () => {
+    cy.get('select')
+      .select('Curie - CAPABLE & FAST')
+    cy.get('.prompt-input')
+      .type('Type prompt here')
+    cy.get('.submit-button')
+      .contains('Submit')
+  })
 
+  it('should display the AI\'s responses underneath the form', () => {
+    cy.get('.responses-header')
+      .contains('Responses')
+  })
+
+  it('should display a sentence telling the user what to do if they have not yet submitted a prompt', () => {
+    cy.get('.response-container')
+      .contains('Type in a prompt to see some responses from the AI.')
+  })
 })
