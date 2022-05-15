@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  padding-left: 200px;
+  padding-right: 215px;
   text-align: left;
+  background: #2B363A;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  color: white;
 }
 
