@@ -12,9 +12,24 @@ const Form = ({ setResponses, setIsLoading }) => {
   const handlePromptChange = (event) => {
     setPrompt(event.target.value)
   }
+
+  const randomizePlaceholder = () => {
+    const placeholder = [
+      'Try typing in: Translate this into Japanese: Hello, how are you?',
+      'Try typing in: What is the circumference of planet Earth?', 
+      'Try typing in: What is your favorite color?', 
+      'Try typing in: Where is Little Rock located?', 
+      'Try typing in: Who wrote the book Green Eggs and Ham?', 
+      'Try typing in: How much of the human body is made of water?', 
+      'Try typing in: Tell me a random fact.',
+      'Try typing in: Who won the grammy for Best New Artist in 2022?'
+    ]
+    setPlaceholder(placeholder[Math.floor(Math.random() * placeholder.length)])
+  }
   
   const handleDropdownChange = (event) => {
     setEngine(event.target.value)
+    randomizePlaceholder()
     setError('')
   }
 
