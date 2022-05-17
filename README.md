@@ -1,6 +1,6 @@
 # Fun with AI 🤖
 
-Whether you’re looking for a friendly chat, studying for an exam, or learning a new language, [Fun with AI](https://fun-with-ai-gjax78.herokuapp.com/) is a simple-to-use application that will help you unlock intellectual potential and may even strengthen your cognitive abilities.
+Whether you’re looking for a friendly chat, studying for an exam, or learning a new language, [Fun with AI](https://fun-with-ai-gjax78.netlify.app/) is a simple-to-use application that will help you unlock intellectual potential and may even strengthen your cognitive abilities.
 
 There are a few friends to collaborate with, each a little unique:
 
@@ -8,7 +8,8 @@ There are a few friends to collaborate with, each a little unique:
 2. Curie - Faster than Davinci, but not quite as capable. She's still learning!
 3. Babbage - Very straightforward and very fast.
 4. Ada - A simple gal, but very speedy!
-    - If you're having trouble deciding, give Curie a try. 
+
+*If you're having trouble deciding, give Curie a try. 
     
 After choosing your friend, put their knowledge to the test by typing a phrase of your choice in the text area (suggested prompts will be loaded for you after you choose your AI, but feel free to create your own as well). Have fun!
 
@@ -18,15 +19,16 @@ After choosing your friend, put their knowledge to the test by typing a phrase o
 This application was created for the Shopify Front End Developer Intern Challenge (Fall 2022).
 
 - Spec sheet can be found [here](https://docs.google.com/document/d/1O7mCynsz_cBXkEaCFGSZAuvAOY84QVq35l20xJwjOYg/edit)
-- Project Board can be found [here](https://github.com/gjax78/fun-with-ai/projects/1)
-- Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
+- GitHub Project Board can be found [here](https://github.com/gjax78/fun-with-ai/projects/1)
+- Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
 
 ## Table of Contents
-- [Overview](#fun-with-gpt3)
+- [Overview](#fun-with-ai)
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Code Architecture](#code-architecture)
 - [Installation](#installation)
+- [Stretch Tech (Extras)](#stretch-tech-extras)
 - [Features](#features)
 - [Future Additions](#future-additions)
 - [Author](#author)
@@ -40,6 +42,11 @@ This application was created for the Shopify Front End Developer Intern Challeng
 - Figma
 
 ## Code Architecture
+  - __cypress__
+    - __fixtures__
+      - [response.json](cypress/fixtures/response.json)
+    - __integration__
+      - [dashboard_spec.js](cypress/integration/dashboard_spec.js)
   - __src__
     - __components__
       - __App__
@@ -61,7 +68,7 @@ This application was created for the Shopify Front End Developer Intern Challeng
     - [index.js](src/index.js)
 
 ## Installation
-- Deployed site [here](https://fun-with-ai-gjax78.herokuapp.com)
+- Deployed site [here](https://fun-with-ai-gjax78.netlify.app/)
 - To view the code locally:
   - Run `git@github.com:gjax78/fun-with-ai.git` in your command line
   - Run `cd fun-with-ai` to navigate into the repository
@@ -69,14 +76,17 @@ This application was created for the Shopify Front End Developer Intern Challeng
   - Run `npm start`
   - The webpage will open in separate browser
 
+## Stretch Tech (Extras)
+- Ability to select the AI engine from a dropdown menu
+- Randomized prompt presets that populate as placeholders after the user selects an AI engine
+
 ## Features
 - Form to submit a prompt and receive a response from an AI engine
-- Ability to select the AI engine from a dropdown menu
-- Randomized suggested prompt ideas that populate as placeholders after the user selects an AI engine
 - 100% Lighthouse Accessibility score
 - Loading symbol shows as site is POSTing data
 - Responsive Design
 - Error handling
+- A hidden Easter egg in the Cypress testing file - see if you can find it!
 
 ## Future Additions
 - Incorporate TypeScript
