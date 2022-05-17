@@ -28,7 +28,7 @@ This application was created for the Shopify Front End Developer Intern Challeng
 - [Technologies](#technologies)
 - [Code Architecture](#code-architecture)
 - [Installation](#installation)
-- [Stretch Tech (Extras)](#stretch-tech-extras)
+- [Stretch Goals (Extras)](#stretch-goals-extras)
 - [Features](#features)
 - [Future Additions](#future-additions)
 - [Author](#author)
@@ -76,7 +76,7 @@ This application was created for the Shopify Front End Developer Intern Challeng
   - Run `npm start`
   - The webpage will open in separate browser
 
-## Stretch Tech (Extras)
+## Stretch Goals (Extras)
 - Ability to select the AI engine from a dropdown menu
 - Randomized prompt presets that populate as placeholders after the user selects an AI engine
 
