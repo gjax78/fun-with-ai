@@ -7,7 +7,7 @@ import './Responses.css'
 const Responses = ({ responses, isLoading }) => {
 const allResponses = responses.map(response => {
     return (
-      <div className='response-container' key={response.key}>
+      <div className='response-container' key={response.id}>
         <ResponseCard
           response={response.response}
           prompt={response.prompt}
