@@ -23,7 +23,7 @@ This application was created for the Shopify Front End Developer Intern Challeng
 - Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
 
 ## Table of Contents
-- [Overview](#fun-with-ai)
+- [Overview](#fun-with-ai-🤖)  
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Code Architecture](#code-architecture)

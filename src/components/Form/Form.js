@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Form.css'
 import fetchAPI from '../../util/apiCalls' 
-import data from '../../util/questions' 
+import questions from '../../util/questions' 
 import robot from './assets/robot.png'
 
 const Form = ({ setResponses, setIsLoading }) => {
@@ -15,14 +15,14 @@ const Form = ({ setResponses, setIsLoading }) => {
     setPrompt(event.target.value)
   }
   
-  const randomizePlaceholder = () => {
-    setPlaceholder(data.questions[Math.floor(Math.random() * data.questions.length)])
-  }
-  
   const handleDropdownChange = (event) => {
     setEngine(event.target.value)
     randomizePlaceholder()
     setError('')
+  }
+  
+  const randomizePlaceholder = () => {
+    setPlaceholder(questions[Math.floor(Math.random() * questions.length)])
   }
 
   const handleSubmit = (event) => {
@@ -41,14 +41,14 @@ const Form = ({ setResponses, setIsLoading }) => {
     }
   }
 
-  const addPrompt = (prompt) => {
+  const addPrompt = () => {
     setIsLoading(true)
     fetchAPI.postPrompt(prompt, engine)
-    .then(data => {
+    .then(response => {
       setResponses(previousResponseCards => [{
+        id: Date.now(),
         prompt: prompt, 
-        response: data.choices[0].text, 
-        key: Date.now()
+        response: response.choices[0].text
       }, ...previousResponseCards])
     })
     .catch(error => setError(error))
