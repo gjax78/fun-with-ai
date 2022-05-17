@@ -1,9 +1,9 @@
 const data = {
   questions: [
-  'Try typing in: "Correct this to standard English: She no went to the market."',
+  'Try typing in: "What are 5 key points I should know when studying Ancient Rome?"',
   'Try typing in: "What is the circumference of planet Earth?"', 
   'Try typing in: "What\'s the smallest country in the world?"', 
-  'Try typing in: ""What country touches the Indian Ocean, the Arabian Sea, and the Bay of Bengal?""', 
+  'Try typing in: "What country touches the Indian Ocean, the Arabian Sea, and the Bay of Bengal?"', 
   'Try typing in: "What country has the most natural lakes?"', 
   'Try typing in: "How much of the human body is made of water?"', 
   'Try typing in: "The unicorn is the national animal of which country?"',

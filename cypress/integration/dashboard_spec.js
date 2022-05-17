@@ -1,7 +1,8 @@
 describe('Dashboard', () => {
   beforeEach(() => {
-    cy.intercept('POST', 'https://api.openai.com/v1/engines/text-curie-001/completions', 
-    { fixture: 'response.json' })
+    cy.intercept('POST', 'https://api.openai.com/v1/engines/text-curie-001/completions', { 
+      fixture: 'response.json' 
+    })
     cy.visit('http://localhost:3000/');
   })
 
@@ -14,7 +15,7 @@ describe('Dashboard', () => {
 
   it('should contain a dropdown, text input box, and a submit button', () => {
     cy.get('select')
-      .select('Curie - CAPABLE & FAST')
+      .select('Curie - Less capable, but fast')
     cy.get('.prompt-input')
       .type('Type prompt here')
     cy.get('.submit-button')
@@ -26,10 +27,9 @@ describe('Dashboard', () => {
       .contains('Responses')
   })
 
-  it('should display a message telling the user what to do if they have not yet submitted a prompt', () => {
+  it('should display a message if the user has not yet submitted a prompt', () => {
     cy.get('.response-container')
       .contains('Type in a prompt to see some responses from the AI.')
-      .should('not.contain', 'Please select an AI engine from the dropdown.')
   })
 
   it('should display a message if the user has not selected an engine', () => {
@@ -37,21 +37,22 @@ describe('Dashboard', () => {
       .click()
     cy.get('.error')
       .contains('Please select an AI engine from the dropdown.')
-      .should('not.contain', 'Type in a prompt to see some responses from the AI.')
+      .should('not.contain', 'Please type a prompt in to get started.')
   })
 
   it('should display a message if the user has not typed in a prompt', () => {
     cy.get('select')
-      .select('Curie - CAPABLE & FAST')
+      .select('Curie - Less capable, but fast')
     cy.get('.submit-button')
       .click()
     cy.get('.error')
       .contains('Please type a prompt in to get started.')
+      .should('not.contain', 'Please select an AI engine from the dropdown.')
   })
 
   it('should be able to send a prompt to the AI engine', () => {
     cy.get('select')
-      .select('Curie - CAPABLE & FAST')
+      .select('Curie - Less capable, but fast')
     cy.get('.prompt-input')
       .type('Type prompt here')
     cy.get('.submit-button')
@@ -60,7 +61,7 @@ describe('Dashboard', () => {
 
   it('should display the AI engine\'s response once the form has been validated and the user submits', () => {
     cy.get('select')
-      .select('Curie - CAPABLE & FAST')
+      .select('Curie - Less capable, but fast')
     cy.get('.prompt-input')
       .type('Type prompt here')
     cy.get('.submit-button')
@@ -77,7 +78,7 @@ describe('Dashboard', () => {
 
   it('should clear the form once the form has been validated and the user submits', () => {
     cy.get('select')
-      .select('Curie - CAPABLE & FAST')
+      .select('Curie - Less capable, but fast')
     cy.get('.prompt-input')
       .type('Why should you consider Geena Jackson as your next Front End Developer Intern?')
     cy.get('.submit-button')

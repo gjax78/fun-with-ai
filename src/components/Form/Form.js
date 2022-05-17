@@ -99,5 +99,6 @@ const Form = ({ setResponses, setIsLoading }) => {
 export default Form
 
 Form.propTypes = {
-  addPrompt: PropTypes.func
+  setResponses: PropTypes.func.isRequired,
+  setIsLoading: PropTypes.func.isRequired
 }

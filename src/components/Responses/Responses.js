@@ -28,5 +28,6 @@ const allResponses = responses.map(response => {
 export default Responses 
 
 Responses.propTypes = {
-  responses: PropTypes.arrayOf(PropTypes.object).isRequired
+  responses: PropTypes.arrayOf(PropTypes.object).isRequired, 
+  isLoading: PropTypes.bool.isRequired
 }
