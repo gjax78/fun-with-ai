@@ -1,5 +1,4 @@
-const data = {
-  questions: [
+const questions = [
   'Try typing in: "What are 5 key points I should know when studying Ancient Rome?"',
   'Try typing in: "What is the circumference of planet Earth?"', 
   'Try typing in: "What\'s the smallest country in the world?"', 
@@ -21,7 +20,6 @@ const data = {
   'Try typing in: "Zurich is the largest city in what country?"',
   'Try typing in: "Name the world\'s largest ocean."', 
   'Try typing in: "Create an analogy for this phrase: Questions are arrows in that:"'
-  ]
-} 
+]
 
-export default data
+export default questions
