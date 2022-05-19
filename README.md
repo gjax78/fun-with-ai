@@ -70,11 +70,14 @@ This application was created for the Shopify Front End Developer Intern Challeng
 ## Installation
 - Deployed site [here](https://fun-with-ai-gjax78.netlify.app/)
 - To view the code locally:
-  - Run `git@github.com:gjax78/fun-with-ai.git` in your command line
-  - Run `cd fun-with-ai` to navigate into the repository
-  - Run `npm install`
-  - Run `npm start`
-  - The webpage will open in separate browser
+  1. Run `git clone git@github.com:gjax78/fun-with-ai.git` in your command line
+  2. Run `cd fun-with-ai` to navigate into the repository
+  3. Run `npm install`
+  4. Sign up for an API key from [OpenAI](https://beta.openai.com/signup)
+  5. Open the root directory of your cloned repo
+  6. Create a .env.local file and store your API key as REACT_APP_API_KEY
+  7. Run `npm start`
+  8. The webpage will open in separate browser
 
 ## Stretch Goals (Extras)
 - Ability to select the AI engine from a dropdown menu
