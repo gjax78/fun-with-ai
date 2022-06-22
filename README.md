@@ -17,7 +17,7 @@ After choosing your friend, put their knowledge to the test by typing a phrase o
 
 ## Documentation
 - GitHub Project Board can be found [here](https://github.com/gjax78/fun-with-ai/projects/1)
-- Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
+- Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-AI?node-id=0%3A1)
 
 ## Table of Contents
 - [Overview](#fun-with-ai-🤖)  
