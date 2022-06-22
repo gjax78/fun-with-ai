@@ -16,11 +16,8 @@ After choosing your friend, put their knowledge to the test by typing a phrase o
 ![gif](https://user-images.githubusercontent.com/88151743/168497487-f710d064-cea4-4e8b-a893-cb8c11ddb089.gif)
 
 ## Documentation
-This application was created for the Shopify Front End Developer Intern Challenge (Fall 2022).
-
-- Spec sheet can be found [here](https://docs.google.com/document/d/1O7mCynsz_cBXkEaCFGSZAuvAOY84QVq35l20xJwjOYg/edit)
 - GitHub Project Board can be found [here](https://github.com/gjax78/fun-with-ai/projects/1)
-- Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-GPT-%7C-SHOPIFY-FALL-2022?node-id=0%3A1)
+- Figma Wireframe can be found [here](https://www.figma.com/file/k2eSKiDGoleYgaNMvT83GS/FUN-WITH-AI?node-id=0%3A1)
 
 ## Table of Contents
 - [Overview](#fun-with-ai-🤖)  
@@ -79,12 +76,10 @@ This application was created for the Shopify Front End Developer Intern Challeng
   7. Run `npm start`
   8. The webpage will open in separate browser
 
-## Stretch Goals (Extras)
-- Ability to select the AI engine from a dropdown menu
-- Randomized prompt presets that populate as placeholders after the user selects an AI engine
-
 ## Features
 - Form to submit a prompt and receive a response from an AI engine
+- Ability to select the AI engine from a dropdown menu
+- Randomized prompt presets that populate as placeholders after the user selects an AI engine
 - 100% Lighthouse Accessibility score
 - Loading symbol shows as site is POSTing data
 - Responsive Design
